@@ -1,6 +1,14 @@
 // Add/reorder image entries here. Both automatic previews and galleries use this list.
 // CampusConnect screenshots are selected from its repository's docs/images/ folder.
 window.PORTFOLIO_PROJECTS = {
+  mineland: {
+    title: 'MineLand Nexus',
+    note: 'Actual interface screenshots from the MineLand Nexus repository. Example reports are engineering demonstrations of the assessment workflow.',
+    images: [
+      ['assets/mineland/overview.png', 'Land assessment workspace'],
+      ['assets/mineland/report.png', 'Evidence-linked environmental report']
+    ]
+  },
   campus: {
     title: 'CampusConnect',
     note: 'Selected app screenshots from the CampusConnect repository: rider booking, scheduled rides, driver earnings, and university administration.',
