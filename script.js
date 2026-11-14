@@ -337,8 +337,8 @@ document.querySelectorAll('.cert-card').forEach(card => {
   document.getElementById('certificate-title').textContent = title;
   const image = document.getElementById('certificate-image');
   image.src = source.src; image.alt = source.alt;
-  document.getElementById('certificate-original').href = source.src;
- document.getElementById('certificate-original').textContent = 'Open full-size certificate';
+  document.getElementById('certificate-original').href = card.dataset.document || source.src;
+ document.getElementById('certificate-original').textContent = card.dataset.document ? 'Open original certificate PDF' : 'Open full-size certificate';
   showDocument(certificateViewer);
  });
 });
@@ -373,8 +373,8 @@ function showCertificate(index) {
  document.getElementById('certificate-title').textContent = card.querySelector('h4').textContent;
  const image = document.getElementById('certificate-image');
  image.src = source.src; image.alt = source.alt;
- document.getElementById('certificate-original').href = source.src;
- document.getElementById('certificate-original').textContent = 'Open full-size certificate';
+ document.getElementById('certificate-original').href = card.dataset.document || source.src;
+ document.getElementById('certificate-original').textContent = card.dataset.document ? 'Open original certificate PDF' : 'Open full-size certificate';
  showDocument(certificateViewer);
 }
 document.querySelectorAll('[data-certificate]').forEach(button => {
